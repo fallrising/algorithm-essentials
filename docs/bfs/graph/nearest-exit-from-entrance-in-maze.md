@@ -81,5 +81,47 @@ public:
 };
 ```
 
+```java
+import java.util.*;
+
+class Solution {
+    public int nearestExit(char[][] maze, int[] entrance) {
+        final int M = maze.length, N = maze[0].length;
+        // four directions: up, down, left, right
+        int[][] dirs = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
+
+        // the state in queue is [x, y, length]
+        Queue<int[]> queue = new LinkedList<>();
+        maze[entrance[0]][entrance[1]] = '+'; // mark as visited before enqueue
+        queue.offer(new int[]{entrance[0], entrance[1], 0});
+
+        while (!queue.isEmpty()) {
+            int[] current = queue.poll();
+            int i = current[0], j = current[1], d = current[2];
+
+            // If this cell is an exit, return directly
+            if ((i != entrance[0] || j != entrance[1]) &&
+                (i == 0 || i == M - 1 || j == 0 || j == N - 1)) {
+                return d;
+            }
+
+            for (int[] dir : dirs) { // expand
+                int next_i = i + dir[0], next_j = j + dir[1];
+
+                // If there exists an unvisited empty neighbor:
+                if (0 <= next_i && next_i < M && 0 <= next_j && next_j < N &&
+                    maze[next_i][next_j] == '.') {
+                    maze[next_i][next_j] = '+'; // mark as visited before enqueue
+                    queue.offer(new int[]{next_i, next_j, d + 1});
+                }
+            }
+        }
+
+        return -1;
+    }
+}
+```
+
+
 </TabItem>
 </Tabs>
