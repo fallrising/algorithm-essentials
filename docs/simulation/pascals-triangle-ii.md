@@ -22,8 +22,9 @@ import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
 <Tabs
-defaultValue="java"
+defaultValue="python"
 values={[
+{ label: 'Python', value: 'python', },
 { label: 'Java', value: 'java', },
 { label: 'C++', value: 'cpp', },
 ]
@@ -69,8 +70,24 @@ public:
 ```
 
 </TabItem>
+
+<TabItem value="python">
+
+```python
+# Pascal's Triangle II
+# 滚动数组，时间复杂度O(n^2)，空间复杂度O(n)
+def get_row(row_index):
+    array = []
+    for i in range(row_index + 1):
+        for j in range(i - 1, 0, -1):
+            array[j] = array[j - 1] + array[j]
+        array.append(1)
+    return array
+```
+
+</TabItem>
 </Tabs>
 
 ### 相关题目
 
-- [Pascal's Triangle](pascal-s-triangle.md)
+- [Pascal's Triangle](pascals-triangle.md)

@@ -50,8 +50,8 @@ More formally, the probability of picking index `i` is `w[i] / sum(w)`.
 
 **Constraints**:
 
-- 1 <= w.length <= 10000
-- 1 <= w[i] <= 10^5
+- $1 \leq w.length \leq 10000$
+- $1 \leq w[i] \leq 10^5$
 - `pickIndex()` will be called at most 10000 times.
 
 ### 分析
@@ -64,8 +64,9 @@ import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
 <Tabs
-defaultValue="java"
+defaultValue="python"
 values={[
+{ label: 'Python', value: 'python', },
 { label: 'Java', value: 'java', },
 { label: 'C++', value: 'cpp', },
 ]
@@ -102,6 +103,31 @@ class Solution {
 
 ```cpp
 // TODO
+```
+
+</TabItem>
+
+<TabItem value="python">
+
+```python
+# Random Pick with Weight
+from bisect import bisect_left
+import random
+
+class Solution:
+    # Time Complexity: O(n), Space Complexity: O(n)
+    def __init__(self, w: list[int]):
+        self.p = [] # probability of each element
+        sum_w = sum(w)
+        curr_sum = 0
+        for x in w:
+            curr_sum += x
+            self.p.append(curr_sum / sum_w)
+
+    # Time Complexity: O(logn), Space Complexity: O(1)
+    def pickIndex(self) -> int:
+        # upper bound
+        return bisect_left(self.p, random.random())
 ```
 
 </TabItem>

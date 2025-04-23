@@ -20,8 +20,9 @@ import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
 <Tabs
-defaultValue="cpp"
+defaultValue="python"
 values={[
+{ label: 'Python', value: 'python', },
 { label: 'Java', value: 'java', },
 { label: 'C++', value: 'cpp', },
 ]
@@ -69,6 +70,14 @@ class Solution {
     return num_islands;
   }
 };
+```
+
+</TabItem>
+
+<TabItem value="python">
+
+```python
+# No code to translate - only a TODO comment
 ```
 
 </TabItem>
@@ -171,6 +180,16 @@ class Solution {
     return num_islands;
   }
 };
+```
+
+</TabItem>
+
+<TabItem value="python">
+
+```python
+# Nothing to translate since the Java code only shows a TODO comment
+
+# TODO
 ```
 
 </TabItem>

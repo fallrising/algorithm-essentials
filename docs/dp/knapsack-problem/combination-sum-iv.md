@@ -30,10 +30,10 @@ The test cases are generated so that the answer can fit in a 32-bit integer.
 
 **Constraints**:
 
-* 1 <= nums.length <= 200
-* 1 <= nums[i] <= 1000
+* $1 \leq nums.length \leq 200$
+* $1 \leq nums[i] \leq 1000$
 * Every element is unique
-* 0 <= target <= 1000
+* $0 \leq target \leq 1000$
 
 ### 分析
 
@@ -47,7 +47,7 @@ import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
 <Tabs
-defaultValue="cpp"
+defaultValue="python"
 values={[
 { label: 'Python', value: 'python', },
 { label: 'Java', value: 'java', },

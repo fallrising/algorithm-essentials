@@ -75,7 +75,7 @@ module.exports = {
           type: "category",
           label: "相向双指针",
           items: [
-            "dual-pointers/2sum-ii",
+            "dual-pointers/two-sum-ii-input-array-is-sorted",
             "dual-pointers/3sum",
             "dual-pointers/3sum-closest",
             "dual-pointers/3sum-smaller",
@@ -100,7 +100,7 @@ module.exports = {
       type: 'category',
       label: '数组',
       items: [
-        "array/2sum",
+        "array/two-sum",
         "array/4sum-ii",
         "array/next-permutation",
         "array/permutation-sequence",
@@ -261,7 +261,7 @@ module.exports = {
             "stack-and-queue/stack/basic-calculator-iii",
             "stack-and-queue/stack/build-binary-expression-tree-from-infix-expression",
             "stack-and-queue/stack/implement-stack-using-queues",
-            "stack-and-queue/stack/median-of-data-stream",
+            "stack-and-queue/stack/find-median-from-data-stream",
             "stack-and-queue/stack/minimum-number-of-swaps-to-make-the-string-balanced",
             "stack-and-queue/stack/minimum-add-to-make-parentheses-valid",
             "stack-and-queue/stack/minimum-remove-to-make-valid-parentheses",
@@ -285,7 +285,7 @@ module.exports = {
           label: "队列",
           items: [
             "stack-and-queue/queue/implement-queue-using-stacks",
-            "stack-and-queue/queue/moving-average-of-data-stream",
+            "stack-and-queue/queue/moving-average-from-data-stream",
             "stack-and-queue/queue/sliding-window-maximum",
             "stack-and-queue/queue/design-bounded-blocking-queue",
             "stack-and-queue/queue/design-circular-queue",
@@ -374,7 +374,7 @@ module.exports = {
       type: 'category',
       label: '二分查找',
       items: [
-        "search/search-for-a-range",
+        "search/find-first-and-last-position-of-element-in-sorted-array",
         "search/search-insert-position",
         "search/search-in-rotated-sorted-array",
         "search/search-in-rotated-sorted-array-ii",
@@ -398,6 +398,7 @@ module.exports = {
         "brute-force/permutations",
         "brute-force/permutations-ii",
         "brute-force/combinations",
+        "brute-force/letter-combinations-of-a-phone-number",
       ],
     },
     {
@@ -600,8 +601,8 @@ module.exports = {
         "simulation/add-strings",
         "simulation/multiply-strings",
         "simulation/substring-with-concatenation-of-all-words",
-        "simulation/pascal-s-triangle",
-        "simulation/pascal-s-triangle-ii",
+        "simulation/pascals-triangle",
+        "simulation/pascals-triangle-ii",
         "simulation/spiral-matrix",
         "simulation/spiral-matrix-ii",
         "simulation/zigzag-conversion",

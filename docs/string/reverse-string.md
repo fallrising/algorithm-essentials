@@ -18,8 +18,9 @@ import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
 <Tabs
-defaultValue="java"
+defaultValue="python"
 values={[
+{ label: 'Python', value: 'python', },
 { label: 'Java', value: 'java', },
 { label: 'C++', value: 'cpp', },
 ]
@@ -61,8 +62,21 @@ public:
 ```
 
 </TabItem>
+
+<TabItem value="python">
+
+```python
+def reverse_string(s):
+    left, right = 0, len(s) - 1
+    while left < right:
+        s[left], s[right] = s[right], s[left]
+        left += 1
+        right -= 1
+```
+
+</TabItem>
 </Tabs>
 
 ### 相关题目
 
-- [Valid Palindrome](valid-palindrome.md)
+- [Valid Palindrome](../dual-pointers/valid-palindrome.md)

@@ -16,8 +16,9 @@ import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
 <Tabs
-defaultValue="cpp"
+defaultValue="python"
 values={[
+{ label: 'Python', value: 'python', },
 { label: 'Java', value: 'java', },
 { label: 'C++', value: 'cpp', },
 ]
@@ -74,6 +75,14 @@ private:
         return p[0] * p[0] + p[1] * p[1];
     }
 };
+```
+
+</TabItem>
+
+<TabItem value="python">
+
+```python
+# TODO
 ```
 
 </TabItem>

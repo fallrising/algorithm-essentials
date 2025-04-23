@@ -30,8 +30,8 @@ Return the list of finite intervals representing **common, positive-length free 
 
 **Constraints**:
 
-- 1 <= schedule.length , schedule[i].length <= 50
-- 0 <= schedule[i].start < schedule[i].end <= 10^8
+- $1 \leq schedule.length, schedule[i].length \leq 50$
+- $0 \leq schedule[i].start < schedule[i].end \leq 10^8$
 
 ### 分析
 
@@ -43,8 +43,9 @@ import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
 <Tabs
-defaultValue="java"
+defaultValue="python"
 values={[
+{ label: 'Python', value: 'python', },
 { label: 'Java', value: 'java', },
 { label: 'C++', value: 'cpp', },
 ]
@@ -100,6 +101,48 @@ public class Solution {
 
 ```cpp
 // TODO
+```
+
+</TabItem>
+
+<TabItem value="python">
+
+```python
+# Employee Free Time
+# 时间复杂度O(n)，空间复杂度O(1)
+class Solution:
+    def employeeFreeTime(self, schedule):
+        intervals = []
+        for employee_schedule in schedule:
+            intervals.extend(employee_schedule)
+        merged = self.merge(intervals)
+        result = []
+        for i in range(len(merged) - 1):
+            result.append(Interval(merged[i].end, merged[i + 1].start))
+        return result
+
+    def merge(self, intervals):
+        result = []
+        for interval in intervals:
+            self.insert(result, interval)
+        return result
+
+    def insert(self, intervals, newInterval):
+        i = 0
+        while i < len(intervals):
+            cur = intervals[i]
+            if newInterval.end < cur.start:
+                intervals.insert(i, newInterval)
+                return intervals
+            elif newInterval.start > cur.end:
+                i += 1
+                continue
+            else:
+                newInterval.start = min(newInterval.start, cur.start)
+                newInterval.end = max(newInterval.end, cur.end)
+                intervals.pop(i)
+        intervals.append(newInterval)
+        return intervals
 ```
 
 </TabItem>

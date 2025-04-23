@@ -22,7 +22,7 @@ A **perfect square** is an integer that is the square of an integer; in other wo
 
 **Constraints**:
 
-* 1 <= n <= $10^4$
+* 1 \leq n \leq 10^4
 
 ### 分析
 
@@ -48,7 +48,7 @@ import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
 <Tabs
-defaultValue="cpp"
+defaultValue="python"
 values={[
 { label: 'Python', value: 'python', },
 { label: 'Java', value: 'java', },

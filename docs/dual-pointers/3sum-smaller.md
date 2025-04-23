@@ -35,9 +35,9 @@ Given an array of n integers `nums` and an integer target, find the number of in
 **Constraints**:
 
 - n == nums.length
-- 0 <= n <= 300
-- -100 <= nums[i] <= 100
-- -100 <= target <= 100
+- $0 \leq n \leq 300$
+- $-100 \leq nums[i] \leq 100$
+- $-100 \leq target \leq 100$
 
 ### 分析
 
@@ -159,8 +159,8 @@ private:
 
 ### 相关题目
 
-- [2Sum](2sum.md)
-- [2Sum II](2sum-ii.md)
+- [2Sum](../array/two-sum.md)
+- [2Sum II](two-sum-ii-input-array-is-sorted.md)
 - [3Sum](3sum.md)
 - [4Sum](4sum.md)
-- [4Sum II](4sum-ii.md)
+- [4Sum II](../array/4sum-ii.md)

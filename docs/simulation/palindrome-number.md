@@ -28,8 +28,9 @@ import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
 <Tabs
-defaultValue="java"
+defaultValue="python"
 values={[
+{ label: 'Python', value: 'python', },
 { label: 'Java', value: 'java', },
 { label: 'C++', value: 'cpp', },
 ]
@@ -83,9 +84,33 @@ public:
 ```
 
 </TabItem>
+
+<TabItem value="python">
+
+```python
+# Palindrome Number
+# 时间复杂度O(1)，空间复杂度O(1)
+def isPalindrome(x: int) -> bool:
+    if x < 0:
+        return False
+    d = 1  # divisor
+    while x // d >= 10:
+        d *= 10
+
+    while x > 0:
+        q = x // d  # quotient
+        r = x % 10  # remainder
+        if q != r:
+            return False
+        x = x % d // 10
+        d //= 100
+    return True
+```
+
+</TabItem>
 </Tabs>
 
 ### 相关题目
 
 - [Reverse Integer](reverse-integer.md)
-- [Valid Palindrome](../string/valid-palindrome.md)
+- [Valid Palindrome](../dual-pointers/valid-palindrome.md)

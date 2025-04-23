@@ -3,7 +3,6 @@ title: Unique Binary Search Trees
 ---
 
 ### 描述
-
 Given `n`, how many structurally unique BST's (binary search trees) that store values `1...n`?
 
 For example,
@@ -32,7 +31,9 @@ Given `n = 3`, there are a total of 5 unique BST's.
 比如，以 1 为根的树的个数，等于左子树的个数乘以右子树的个数，左子树是 0 个元素的树，右子树是 2 个元素的树。以 2 为根的树的个数，等于左子树的个数乘以右子树的个数，左子树是 1 个元素的树，右子树也是 1 个元素的树。依此类推。
 
 当数组为 `1,2,3,...,n`时，基于以下原则的构建的 BST 树具有唯一性：
-\textbf{以 i 为根节点的树，其左子树由[1, i-1]构成， 其右子树由[i+1, n]构成。}
+
+以 (i) 为根节点的树，其左子树由 ([1, i-1]) 构成，其右子树由 ([i+1, n]) 构成。
+
 
 定义`f(i)`为以`[1,i]`能产生的 Unique Binary Search Tree 的数目，则
 
@@ -72,8 +73,9 @@ import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
 <Tabs
-defaultValue="java"
+defaultValue="python"
 values={[
+{ label: 'Python', value: 'python', },
 { label: 'Java', value: 'java', },
 { label: 'C++', value: 'cpp', },
 ]
@@ -120,6 +122,24 @@ public:
         return f[n];
     }
 };
+```
+
+</TabItem>
+
+<TabItem value="python">
+
+```python
+# Unique Binary Search Trees
+# 时间复杂度O(n^2)，空间复杂度O(n)
+class Solution:
+    def numTrees(self, n: int) -> int:
+        f = [0] * (n + 1)
+        f[0] = 1
+        f[1] = 1
+        for i in range(2, n + 1):
+            for k in range(1, i + 1):
+                f[i] += f[k-1] * f[i - k]
+        return f[n]
 ```
 
 </TabItem>

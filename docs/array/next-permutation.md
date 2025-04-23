@@ -20,7 +20,7 @@ Here are some examples. Inputs are in the left-hand column and its corresponding
 
 ### 分析
 
-算法过程如下图所示（来自<http://fisherlei.blogspot.com/2012/12/leetcode-next-permutation.html>）。
+算法过程如下图所示（来自[http://fisherlei.blogspot.com/2012/12/leetcode-next-permutation.html](http://fisherlei.blogspot.com/2012/12/leetcode-next-permutation.html)）。
 
 ![下一个排列算法流程](/img/next-permutation.png)
 
@@ -30,8 +30,9 @@ import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
 <Tabs
-defaultValue="java"
+defaultValue="python"
 values={[
+{ label: 'Python', value: 'python', },
 { label: 'Java', value: 'java', },
 { label: 'C++', value: 'cpp', },
 ]
@@ -120,6 +121,56 @@ private:
         return true;
     }
 };
+```
+
+</TabItem>
+
+<TabItem value="python">
+
+```python
+# Next Permutation
+# Time Complexity: O(n), Space Complexity: O(1)
+class Solution:
+    def nextPermutation(self, nums: list[int]) -> None:
+        self.nextPermutation_helper(nums, 0, len(nums))
+
+    @staticmethod
+    def nextPermutation_helper(nums: list[int], begin: int, end: int) -> bool:
+        # From right to left, find the first digit(partitionNumber)
+        # which violates the increase trend
+        p = end - 2
+        while p > -1 and nums[p] >= nums[p + 1]:
+            p -= 1
+
+        # If not found, which means current sequence is already the largest
+        # permutation, then rearrange to the first permutation and return false
+        if p == -1:
+            Solution.reverse(nums, begin, end)
+            return False
+
+        # From right to left, find the first digit which is greater
+        # than the partition number, call it changeNumber
+        c = end - 1
+        while c > 0 and nums[c] <= nums[p]:
+            c -= 1
+
+        # Swap the partitionNumber and changeNumber
+        Solution.swap(nums, p, c)
+        # Reverse all the digits on the right of partitionNumber
+        Solution.reverse(nums, p+1, end)
+        return True
+
+    @staticmethod
+    def swap(nums: list[int], i: int, j: int) -> None:
+        nums[i], nums[j] = nums[j], nums[i]
+
+    @staticmethod
+    def reverse(nums: list[int], begin: int, end: int) -> None:
+        end -= 1
+        while begin < end:
+            Solution.swap(nums, begin, end)
+            begin += 1
+            end -= 1
 ```
 
 </TabItem>

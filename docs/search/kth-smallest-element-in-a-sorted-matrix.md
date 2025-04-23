@@ -18,8 +18,9 @@ import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
 <Tabs
-defaultValue="cpp"
+defaultValue="python"
 values={[
+{ label: 'Python', value: 'python', },
 { label: 'Java', value: 'java', },
 { label: 'C++', value: 'cpp', },
 ]
@@ -57,6 +58,16 @@ public:
 ```
 
 上面这个代码只利用了行有序的信息，没有利用列有序的信息。
+
+</TabItem>
+
+<TabItem value="python">
+
+```python
+# No code provided to translate
+# Use "TODO" comment as a placeholder
+# TODO
+```
 
 </TabItem>
 </Tabs>
@@ -109,6 +120,14 @@ public:
         return count;
     }
 };
+```
+
+</TabItem>
+
+<TabItem value="python">
+
+```python
+# empty comment line since input only had a TODO
 ```
 
 </TabItem>

@@ -4,7 +4,7 @@ title: 2Sum II
 
 ### 描述
 
-Based on [2Sum](2sum.md), the only change is that **array is sorted in ascending order**.
+Based on [2Sum](../array/two-sum.md), the only change is that **array is sorted in ascending order**.
 
 **Example 1:**
 
@@ -26,10 +26,10 @@ Based on [2Sum](2sum.md), the only change is that **array is sorted in ascending
 
 **Constraints:**
 
-- 2 <= nums.length <= $3 * 10^4$
-- -1000 <= nums[i] <= 1000
+- $2 \leq nums.length \leq 3 * 10^4$
+- $-1000 \leq nums[i] \leq 1000$
 - `nums` is sorted in ascending order
-- -1000 <= target <= 1000
+- $-1000 \leq target \leq 1000$
 - Only one valid answer exists.
 
 ### 分析
@@ -124,9 +124,9 @@ public:
 
 ### 相关题目
 
-- [2Sum](2sum.md)
+- [2Sum](../array/two-sum.md)
 - [3Sum](3sum.md)
 - [3Sum Closest](3sum-closest.md)
 - [4Sum](4sum.md)
-- [4Sum II](4sum-ii.md)
+- [4Sum II](../array/4sum-ii.md)
 - [Reverse String](../string/reverse-string.md)

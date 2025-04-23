@@ -27,8 +27,9 @@ import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
 <Tabs
-defaultValue="java"
+defaultValue="python"
 values={[
+{ label: 'Python', value: 'python', },
 { label: 'Java', value: 'java', },
 { label: 'C++', value: 'cpp', },
 ]
@@ -85,8 +86,30 @@ public:
 ```
 
 </TabItem>
+
+<TabItem value="python">
+
+```python
+# Search Insert Position
+# 重新实现 lower_bound
+# 时间复杂度O(logn)，空间复杂度O(1)
+class Solution:
+    def searchInsert(self, nums: list[int], target: int) -> int:
+        return self.lower_bound(nums, 0, len(nums), target)
+
+    def lower_bound(self, A: list[int], first: int, last: int, target: int) -> int:
+        while first != last:
+            mid = first + (last - first) // 2
+            if target > A[mid]:
+                first = mid + 1
+            else:
+                last = mid
+        return first
+```
+
+</TabItem>
 </Tabs>
 
 ### 相关题目
 
-- [Search for a Range](search-for-a-range.md)
+- [Search for a Range](find-first-and-last-position-of-element-in-sorted-array.md)

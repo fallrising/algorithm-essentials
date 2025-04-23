@@ -22,10 +22,11 @@ import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
 <Tabs
-defaultValue="java"
+defaultValue="python"
 values={[
 { label: 'Java', value: 'java', },
 { label: 'C++', value: 'cpp', },
+{ label: 'Python', value: 'python', },
 ]
 }>
 <TabItem value="java">
@@ -73,12 +74,31 @@ public:
 ```
 
 </TabItem>
+<TabItem value="python">
+
+```python
+# Remove Duplicates from Sorted List
+# 时间复杂度O(n)，空间复杂度O(1)
+class Solution:
+    def deleteDuplicates(self, head):
+        p = head
+        while p and p.next:
+            if p.next.val == p.val:
+                tmp = p.next
+                p.next = p.next.next
+                del tmp
+            else:
+                p = p.next
+        return head
+```
+
+</TabItem>
 </Tabs>
 
 ### 相关题目
 
 - [Remove Duplicates from Sorted List II](remove-duplicates-from-sorted-list-ii.md)
-- [Remove Duplicates from Sorted Array](../array/remove-duplicates-from-sorted-array.md)
-- [Remove Duplicates from Sorted Array II](../array/remove-duplicates-from-sorted-array-ii.md)
-- [Remove Element](../array/remove-element.md)
-- [Move Zeroes](../array/move-zeroes.md)
+- [Remove Duplicates from Sorted Array](../dual-pointers/remove-duplicates-from-sorted-array.md)
+- [Remove Duplicates from Sorted Array II](../dual-pointers/remove-duplicates-from-sorted-array-ii.md)
+- [Remove Element](../dual-pointers/remove-element.md)
+- [Move Zeroes](../dual-pointers/move-zeroes.md)

@@ -1,5 +1,5 @@
 ---
-title: Median of Data Stream
+title: Find Median from Data Stream
 ---
 
 ### 描述
@@ -158,4 +158,4 @@ public:
 
 ### 相关题目
 
-- [Moving Average of Data Stream](../queue/moving-average-of-data-stream)
+- [Moving Average from Data Stream](../queue/moving-average-from-data-stream)

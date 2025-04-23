@@ -28,9 +28,9 @@ The function twoSum should return indices of the two numbers such that they add 
 
 **Constraints:**
 
-- 2 <= nums.length <= $10^5$
-- $-10^9$ <= nums[i] <= $10^9$
-- $-10^9$ <= target <= $10^9$
+- 2 \leq nums.length \leq 10^5
+- -10^9 \leq nums[i] \leq 10^9
+- -10^9 \leq target  $\leq 10^9
 - Only one valid answer exists.
 
 ### 分析
@@ -205,8 +205,8 @@ public:
 
 ### 相关题目
 
-- [2Sum II](2sum-ii.md)
-- [3Sum](3sum.md)
-- [3Sum Closest](3sum-closest.md)
-- [4Sum](4sum.md)
+- [2Sum II](../dual-pointers/two-sum-ii-input-array-is-sorted.md)
+- [3Sum](../dual-pointers/3sum.md)
+- [3Sum Closest](../dual-pointers/3sum-closest.md)
+- [4Sum](../dual-pointers/4sum.md)
 - [4Sum II](4sum-ii.md)

@@ -16,8 +16,9 @@ import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
 <Tabs
-defaultValue="cpp"
+defaultValue="python"
 values={[
+{ label: 'Python', value: 'python', },
 { label: 'Java', value: 'java', },
 { label: 'C++', value: 'cpp', },
 ]
@@ -60,6 +61,14 @@ class Solution {
  private:
   vector<vector<int>> result;
 };
+```
+
+</TabItem>
+
+<TabItem value="python">
+
+```python
+# Empty program (no Java code was provided to translate)
 ```
 
 </TabItem>

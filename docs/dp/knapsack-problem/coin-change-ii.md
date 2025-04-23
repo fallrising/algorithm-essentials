@@ -36,10 +36,10 @@ The answer is guaranteed to fit into a signed 32-bit integer.
 
 **Constraints**:
 
-* 1 <= coins.length <= 300
-* 1 <= coins[i] <= 5000
+* $1 \leq coins.length \leq 300$
+* $1 \leq coins[i] \leq 5000$
 * Each coin is unique
-* 0 <= amount <= 5000
+* $0 \leq amount \leq 5000$
 
 ### 分析
 
@@ -60,7 +60,7 @@ import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
 <Tabs
-defaultValue="cpp"
+defaultValue="python"
 values={[
 { label: 'Python', value: 'python', },
 { label: 'Java', value: 'java', },
